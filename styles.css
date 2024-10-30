@@ -1,3 +1,6 @@
+/* Import Google Font for Header */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;900&display=swap');
+
 /* Global Styles */
 body {
     background-color: #E8F8F5;
@@ -15,15 +18,35 @@ body {
 
 /* Header Styles */
 header {
-    background-color: #007EA7;
+    background: linear-gradient(135deg, #007EA7, #005073);
     color: #fff;
-    padding: 30px 10px;
+    padding: 10px 15px;
     text-align: center;
-    position: relative;
-    opacity: 0;
-    animation: fadeIn 1s forwards;
-    animation-delay: 0.5s;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Header Title Styles */
+header h1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-size: 2rem;
+    margin: 0;
+    line-height: 1.2;
+    color: #fff;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(90deg, #E8F8F5, #C9E4CA);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Subtitle Style */
+header h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 0.9rem;
+    color: #f4f4f9;
+    margin-top: 3px;
+    opacity: 0.85;
 }
 
 /* Navigation Styles */
