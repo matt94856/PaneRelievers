@@ -1,6 +1,6 @@
 /* Global Styles */
 body {
-    background-color: #E8F8F5; /* Light aqua background */
+    background-color: #E8F8F5;
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
@@ -15,9 +15,9 @@ body {
 
 /* Header Styles */
 header {
-    background-color: #007EA7; /* Deep ocean blue */
+    background-color: #007EA7;
     color: #fff;
-    padding: 40px 20px;
+    padding: 30px 10px;
     text-align: center;
     position: relative;
     opacity: 0;
@@ -28,15 +28,15 @@ header {
 
 /* Navigation Styles */
 nav {
-    background-color: #00A8E8; /* Bright sky blue */
-    overflow: hidden;
+    background-color: #00A8E8;
     opacity: 0;
     animation: fadeIn 1s forwards;
     animation-delay: 0.5s;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     display: flex;
     justify-content: center;
-    padding: 10px 0;
+    padding: 8px 0;
+    flex-wrap: wrap;
 }
 
 nav ul {
@@ -45,48 +45,49 @@ nav ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
+    flex-wrap: wrap;
 }
 
 nav a {
     display: block;
     color: #fff;
     text-align: center;
-    padding: 14px 20px;
+    padding: 10px 15px;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 16px;
     text-transform: uppercase;
     letter-spacing: 1.5px;
     transition: background-color 0.3s ease-in-out, transform 0.2s;
     border-radius: 5px;
-    margin: 0 10px;
+    margin: 5px;
 }
 
 nav a:hover {
-    background-color: #005073; /* Darker blue on hover */
+    background-color: #005073;
     transform: scale(1.05);
 }
 
 /* Review Section Styles */
 .review-section {
     background-color: #fff;
-    padding: 40px 20px;
+    padding: 30px 10px;
     border-radius: 10px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    margin: 20px 0;
+    margin: 10px;
 }
 
 .review-section h2 {
     text-align: center;
     color: #007EA7;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .review {
     border: 1px solid #007EA7;
-    padding: 20px;
+    padding: 15px;
     border-radius: 10px;
-    margin: 15px 0;
-    background-color: #E0F7FA; /* Light beachy aqua */
+    margin: 10px 0;
+    background-color: #E0F7FA;
     transition: transform 0.2s;
 }
 
@@ -107,11 +108,11 @@ nav a:hover {
 
 /* Heading Styles */
 h1 {
-    font-family: 'Montserrat', sans-serif; /* Updated font */
+    font-family: 'Montserrat', sans-serif;
     text-align: center;
-    margin: 50px 0;
-    font-size: 3rem;
-    color: #333; /* Dark gray color */
+    margin: 40px 0;
+    font-size: 2.5rem;
+    color: #333;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     opacity: 0;
     animation: fadeIn 1s forwards;
@@ -128,8 +129,8 @@ h1 {
 /* Service Section Styles */
 .service {
     border: 2px solid #00A8E8;
-    padding: 20px;
-    margin: 20px;
+    padding: 15px;
+    margin: 15px;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -138,27 +139,25 @@ h1 {
 }
 
 .service h2 {
-    margin-top: 0;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: #005073;
 }
 
 .service p {
-    margin-bottom: 0;
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: #444;
 }
 
 /* Footer Styles */
 footer {
     background-color: #007EA7;
-    padding: 20px;
+    padding: 15px;
     text-align: center;
     opacity: 0;
     animation: fadeIn 1s forwards;
     animation-delay: 0.5s;
-    margin-top: 30px;
     color: #fff;
+    margin-top: 20px;
 }
 
 /* Button Styles */
@@ -167,9 +166,9 @@ footer {
     text-align: center;
     background-color: #005073;
     color: #fff;
-    padding: 15px 30px;
+    padding: 10px 25px;
     border-radius: 10px;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     transition: background-color 0.3s, transform 0.3s;
     margin: 10px 0;
 }
@@ -179,25 +178,91 @@ footer {
     transform: scale(1.05);
 }
 
+/* Contact Section Styles */
+#contact-us {
+    background-color: #E0F7FA;
+    padding: 30px 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    margin: 10px auto;
+    max-width: 600px;
+    animation: fadeIn 1s forwards;
+    opacity: 0;
+    animation-delay: 0.5s;
+}
+
+#contact-us h2 {
+    color: #007EA7;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* About Section Styles */
+#about-pane-relievers {
+    background-color: #E0F7FA;
+    padding: 30px 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    margin: 10px auto;
+    max-width: 600px;
+    animation: fadeIn 1s forwards;
+    opacity: 0;
+    animation-delay: 0.5s;
+}
+
+#about-pane-relievers h2 {
+    color: #007EA7;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Social Media Links */
+.social-media {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.social-media a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #007EA7;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.social-media a:hover {
+    color: #005073;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
+    }
+
+    nav {
+        flex-direction: column;
     }
 
     nav a {
-        padding: 10px;
-        font-size: 16px;
+        padding: 8px;
+        font-size: 14px;
     }
 
-    .service {
+    .service, .review-section, #contact-us, #about-pane-relievers {
         margin: 10px;
         padding: 15px;
     }
 
     .button {
-        padding: 10px 20px;
-        font-size: 1.2rem;
+        padding: 8px 20px;
+        font-size: 1rem;
+    }
+
+    #contact-us, #about-pane-relievers {
+        padding: 20px 10px;
+        max-width: 100%;
     }
 }
 
@@ -210,7 +275,6 @@ a {
     transition: color 0.3s ease-in-out;
 }
 
-/* Add a gradient background to links */
 a::after {
     content: '';
     position: absolute;
@@ -231,61 +295,6 @@ a:hover::after {
     transform: scaleX(1);
 }
 
-/* Contact Section Styles */
-#contact-us {
-    background-color: #E0F7FA; /* Light beachy aqua for the background */
-    padding: 40px 20px; /* Padding for spacing */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    margin: 20px auto; /* Center section horizontally */
-    max-width: 600px; /* Limit the width for better readability */
-    animation: fadeIn 1s forwards; /* Fade-in animation */
-    opacity: 0; /* Initial opacity for fade effect */
-    animation-delay: 0.5s; /* Delay for fade-in effect */
-}
-
-/* Heading Styles in the Contact Section */
-#contact-us h2 {
-    color: #007EA7; /* Deep ocean blue for headings */
-    text-align: center; /* Center the heading */
-    margin-bottom: 20px; /* Space below the heading */
-}
-
-/* Paragraph Styles in the Contact Section */
-.contact-section p {
-    text-align: center; /* Center align paragraphs */
-    margin-bottom: 15px; /* Space below each paragraph */
-}
-
-/* Social Media Links */
-.social-media {
-    display: flex; /* Flexbox for horizontal layout */
-    justify-content: center; /* Center the links */
-    margin-bottom: 20px; /* Space below social media section */
-}
-
-.social-media a {
-    margin: 0 10px; /* Margin between links */
-    text-decoration: none; /* No underline */
-    color: #007EA7; /* Link color */
-    font-weight: bold; /* Bold font for emphasis */
-    transition: color 0.3s; /* Transition for color change */
-}
-
-.social-media a:hover {
-    color: #005073; /* Darker blue on hover */
-}
-
-/* Email and Phone Styles */
-.contact-section a {
-    color: #007EA7; /* Color for email and phone links */
-    text-decoration: none; /* No underline */
-}
-
-.contact-section a:hover {
-    color: #005073; /* Darker blue on hover */
-}
-
 /* Make images responsive */
 img {
     max-width: 100%;
@@ -294,33 +303,12 @@ img {
     margin: 0 auto;
 }
 
-/* Center the container of images */
 .image-container {
     text-align: center;
     margin: 20px 0;
 }
 
-/* Optional: Add padding to the main content for smaller screens */
+/* Optional: Add padding to main content for smaller screens */
 main {
     padding: 0 15px;
-}
-
-/* About Section Styles */
-#about-pane-relievers {
-    background-color: #E0F7FA; /* Light beachy aqua for the background */
-    padding: 40px 20px; /* Padding for spacing */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    margin: 20px auto; /* Center section horizontally */
-    max-width: 600px; /* Limit the width for better readability */
-    animation: fadeIn 1s forwards; /* Fade-in animation */
-    opacity: 0; /* Initial opacity for fade effect */
-    animation-delay: 0.5s; /* Delay for fade-in effect */
-}
-
-/* About Section Heading */
-#about-pane-relievers h2 {
-    color: #007EA7; /* Deep ocean blue for headings */
-    text-align: center; /* Center the heading */
-    margin-bottom: 20px; /* Space below the heading */
 }
