@@ -314,3 +314,21 @@ nav a:hover {
         opacity: 1;
     }
 }
+/* Quote and Inquiry Buttons */
+.quote-button, .inquiry-button {
+    display: inline-block; /* Ensures they behave like buttons */
+    background-color: black; /* Black background for the buttons */
+    color: white; /* Text color */
+    border-radius: 25px; /* Rounded corners */
+    padding: 10px 20px; /* Padding for space around text */
+    text-align: center; /* Center the text */
+    font-size: 1em; /* Font size */
+    transition: background 0.3s ease, transform 0.3s ease; /* Smooth transition */
+    border: none; /* No border */
+    cursor: pointer; /* Pointer on hover */
+}
+
+.quote-button:hover, .inquiry-button:hover {
+    background-color: #333; /* Darker shade on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
