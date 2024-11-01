@@ -97,25 +97,91 @@ nav a:hover {
         padding: 10px 5px;
         margin-bottom: 60px;
     }
+    
     .main-header img {
         width: 100%;
         max-height: 200px;
     }
+    
     .main-header h1 {
         font-size: 1.8em;
         margin: 15px 0;
     }
+    
     .main-header nav ul {
         flex-direction: column; /* Stack items vertically on mobile */
         align-items: center; /* Center align on mobile */
+        width: 100%; /* Ensure full width */
     }
+    
     .main-header nav ul li {
         margin: 10px 0; /* Adjust spacing between buttons on mobile */
     }
+    
     .main-header nav ul li a {
         padding: 8px 16px; /* Adjust padding for mobile */
         font-size: 0.9em; /* Smaller font size on mobile */
         color: #fff;
+        width: 90%; /* Ensure buttons fit within viewport */
+    }
+    
+    /* Adjust Hero Section Padding */
+    .hero {
+        padding: 60px 15px; /* Reduce padding for smaller screens */
+    }
+    
+    /* Adjust Hero Section Font Sizes */
+    .hero h2 {
+        font-size: 1.8em;
+    }
+    
+    .hero p {
+        font-size: 1em;
+    }
+    
+    /* Adjust Button Sizes */
+    .hero .btn {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+    
+    /* Adjust Services Section Padding */
+    .services, .about-section, .review-section, .contact-section {
+        padding: 30px 15px;
+    }
+    
+    .services h2,
+    .about-section h2,
+    .review-section h2,
+    .contact-section h2 {
+        font-size: 1.5em;
+    }
+    
+    /* Adjust Service Box Padding and Font Sizes */
+    .service-box {
+        padding: 20px;
+    }
+    
+    .service-box h3 {
+        font-size: 1.5em;
+    }
+    
+    .service-box p {
+        font-size: 1em;
+    }
+    
+    /* Adjust Circular Button Size */
+    .service-box .circular-btn {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 1em;
+    }
+    
+    /* Adjust Quote and Inquiry Buttons */
+    .quote-button, .inquiry-button {
+        padding: 8px 16px;
+        font-size: 0.9em;
     }
 }
 
@@ -269,8 +335,24 @@ nav a:hover {
 }
 
 .review {
+    background: #f4f4f4;
+    padding: 30px;
+    margin: 20px auto;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    color: #333;
+    text-align: center;
+    transition: transform 0.3s ease, background 0.3s ease;
+    max-width: 600px; /* Limit width for better readability */
+}
+
+.review:hover {
+    transform: translateY(-5px);
+    background: #e6e6fa;
+}
+
+.review p {
     font-size: 1.1em;
-    margin: 10px 0;
 }
 
 /* Contact Section */
@@ -292,20 +374,45 @@ nav a:hover {
     letter-spacing: 2px;
 }
 
-.contact-section p {
-    font-size: 1.2em;
-    margin: 20px 0;
+.contact-section form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-section input, .contact-section textarea {
+    width: 80%;
+    max-width: 600px;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.contact-section button {
+    background: #6a5acd;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.contact-section button:hover {
+    background: #483d8b;
 }
 
 /* Footer */
 .footer {
-    padding: 20px 0;
+    background-color: #6a5acd;
+    color: #fff;
     text-align: center;
-    background-color: #333;
-    color: white;
+    padding: 20px 0;
+    margin-top: 20px;
 }
 
-/* Keyframes for animations */
+/* Animation Keyframes */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -314,6 +421,18 @@ nav a:hover {
         opacity: 1;
     }
 }
+
+@keyframes fadeInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
 /* Quote and Inquiry Buttons */
 .quote-button, .inquiry-button {
     display: inline-block; /* Ensures they behave like buttons */
@@ -331,4 +450,91 @@ nav a:hover {
 .quote-button:hover, .inquiry-button:hover {
     background-color: #333; /* Darker shade on hover */
     transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Responsive Design Enhancements */
+@media (max-width: 1200px) {
+    /* Ensure sections don't exceed screen width */
+    .services, .about-section, .review-section, .contact-section {
+        padding: 40px 15px;
+    }
+}
+
+@media (max-width: 992px) {
+    /* Adjust navigation padding and spacing */
+    .main-header nav {
+        padding: 8px;
+    }
+    
+    nav li {
+        margin: 0 10px;
+    }
+    
+    nav a {
+        padding: 8px 16px;
+    }
+    
+    .main-header nav ul li a {
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 576px) {
+    /* Further adjustments for very small screens */
+    .main-header h1 {
+        font-size: 1.5em;
+    }
+    
+    .main-header nav ul li a {
+        padding: 6px 12px;
+        font-size: 0.8em;
+    }
+    
+    .hero {
+        padding: 60px 10px;
+    }
+    
+    .hero h2 {
+        font-size: 1.6em;
+    }
+    
+    .hero p {
+        font-size: 1em;
+    }
+    
+    .hero .btn {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+    
+    .services h2,
+    .about-section h2,
+    .review-section h2,
+    .contact-section h2 {
+        font-size: 1.4em;
+    }
+    
+    .service-box h3 {
+        font-size: 1.4em;
+    }
+    
+    .service-box p {
+        font-size: 1em;
+    }
+    
+    .service-box .circular-btn {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 1em;
+    }
+    
+    .quote-button, .inquiry-button {
+        padding: 8px 16px;
+        font-size: 0.8em;
+    }
+    
+    .contact-section input, .contact-section textarea {
+        width: 90%;
+    }
 }
