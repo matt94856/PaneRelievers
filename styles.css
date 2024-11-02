@@ -112,6 +112,8 @@ nav a:hover {
         flex-direction: column;
         align-items: center;
         width: 100%;
+        padding: 0; /* Remove padding for better alignment */
+        margin: 0; /* Remove margin for better alignment */
     }
     
     .main-header nav ul li {
@@ -122,12 +124,12 @@ nav a:hover {
         padding: 8px 16px;
         font-size: 0.9em;
         color: #fff;
-        width: 90%;
+        width: 100%; /* Set width to 100% for full button coverage */
     }
     
     /* Adjust Hero Section Padding */
     .hero {
-        padding: 60px 15px;
+        padding: 60px 10px; /* Reduced horizontal padding */
     }
     
     /* Adjust Hero Section Font Sizes */
@@ -147,7 +149,7 @@ nav a:hover {
     
     /* Adjust Services Section Padding */
     .services, .about-section, .review-section, .contact-section {
-        padding: 30px 15px;
+        padding: 30px 10px; /* Reduced horizontal padding */
     }
     
     .services h2,
@@ -272,23 +274,54 @@ nav a:hover {
     font-size: 1.1em;
 }
 
-/* New Circular Button Style */
+/* Services Section Buttons */
 .service-box .circular-btn {
     display: inline-block;
-    background-color: black;
+    background-color: #6a5acd; /* Color from h3 in services section */
     color: white;
-    border-radius: 50%;
+    border-radius: 50%; /* Circular shape */
+    width: 50px; /* Adjust width */
+    height: 50px; /* Adjust height */
+    text-align: center;
+    line-height: 50px; /* Center text vertically */
+    font-size: 1.2em;
+    transition: background 0.3s ease, transform 0.3s ease;
+    position: relative; /* For pseudo-element effect */
+}
+
+/* New Star Shape Button */
+.service-box .star-btn {
+    display: inline-block;
+    background-color: #6a5acd; /* Color from h3 in services section */
+    color: white;
     width: 50px;
     height: 50px;
     text-align: center;
     line-height: 50px;
     font-size: 1.2em;
     transition: background 0.3s ease, transform 0.3s ease;
+    position: relative;
 }
 
-.service-box .circular-btn:hover {
-    background-color: #333;
-    transform: scale(1.1);
+/* Star shape using ::before and ::after pseudo-elements */
+.service-box .star-btn::before,
+.service-box .star-btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background-color: inherit;
+    transform: translate(-50%, -50%);
+    clip-path: polygon(50% 0%, 63% 35%, 100% 35%, 72% 57%, 82% 91%, 50% 70%, 18% 91%, 28% 57%, 0% 35%, 37% 35%);
+}
+
+/* Button hover effects */
+.service-box .circular-btn:hover,
+.service-box .star-btn:hover {
+    background-color: #483d8b; /* Darker color on hover */
+    transform: scale(1.1); /* Scale effect on hover */
 }
 
 /* About Section */
@@ -296,35 +329,19 @@ nav a:hover {
     padding: 50px 20px;
     text-align: center;
     background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin: 20px 0;
     border-radius: 15px;
-    transition: background 0.3s ease;
+    margin: 20px 0;
     animation: fadeIn 2s ease-out;
 }
 
 .about-section h2 {
     font-size: 2em;
     color: #6a5acd;
-    text-transform: uppercase;
-    letter-spacing: 2px;
 }
 
 .about-section p {
     font-size: 1.1em;
-    color: #333;
-}
-
-.quote-button, .inquiry-button {
-    background-color: #6a5acd;
-    color: white;
-    padding: 12px 30px;
-    text-decoration: none;
-    border-radius: 30px;
-    font-size: 1em;
-    margin-top: 10px;
-    display: inline-block;
-    transition: background-color 0.3s ease;
+    margin: 15px 0;
 }
 
 /* Review Section */
@@ -332,41 +349,142 @@ nav a:hover {
     padding: 50px 20px;
     text-align: center;
     background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin: 20px 0;
     border-radius: 15px;
-    transition: background 0.3s ease;
+    margin: 20px 0;
     animation: fadeIn 2s ease-out;
 }
 
 .review-section h2 {
     font-size: 2em;
     color: #6a5acd;
-    text-transform: uppercase;
-    letter-spacing: 2px;
 }
 
 .review {
     background: #f4f4f4;
-    padding: 30px;
-    margin: 20px auto;
-    border-radius: 15px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    color: #333;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.center-image {
+    text-align: center; /* Centers inline elements like the image and text */
+}
+
+.carousel-image {
+    display: inline-block; /* Makes the image inline for centering */
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 50px 20px;
     text-align: center;
-    transition: transform 0.3s ease, background 0.3s ease;
-    max-width: 600px; /* Limit width for better readability */
+    background-color: #fff;
+    border-radius: 15px;
+    margin: 20px 0;
+    animation: fadeIn 2s ease-out;
 }
 
-.review:hover {
-    transform: translateY(-5px);
-    background: #e6e6fa;
+.contact-section h2 {
+    font-size: 2em;
+    color: #6a5acd;
 }
 
-.review p {
-    font-size: 1.1em;
+.contact-section form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
 }
 
-.quote-button:hover, .inquiry-button:hover {
-    background-color: #483d8b;
+.contact-section input,
+.contact-section textarea {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-section button {
+    background: #6a5acd;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.contact-section button:hover {
+    background: #483d8b;
+}
+
+/* Footer */
+.footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Misc Styles */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .service-box {
+        margin: 15px 0; /* Adjust margin for mobile */
+    }
+    
+    .quote-button, .inquiry-button {
+        padding: 8px 16px;
+        font-size: 0.9em;
+    }
+}
+/* Quote and Inquiry Buttons */
+.quote-button,
+.inquiry-button {
+    background-color: #6a5acd; /* Matches the h3 text color */
+    color: white; /* White text */
+    padding: 12px 24px; /* Padding for button size */
+    border: none; /* No border */
+    border-radius: 30px; /* Rounded shape */
+    font-size: 1em; /* Font size */
+    font-weight: bold; /* Bold text */
+    text-align: center; /* Center text */
+    text-decoration: none; /* No underline */
+    transition: background 0.3s ease, transform 0.3s ease; /* Transition for effects */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Box shadow for depth */
+    cursor: pointer; /* Pointer on hover */
+}
+
+.quote-button:hover,
+.inquiry-button:hover {
+    background-color: #483d8b; /* Darker shade on hover */
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+/* Adjusting Button Styles for Mobile */
+@media (max-width: 768px) {
+    .quote-button,
+    .inquiry-button {
+        padding: 10px 20px; /* Slightly smaller padding for mobile */
+        font-size: 0.9em; /* Adjust font size */
+    }
 }
