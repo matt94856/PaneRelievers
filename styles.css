@@ -29,40 +29,40 @@ body {
 }
 
 .main-header nav {
-    background: #fff; /* Header background */
+    background: #fff;
     border-radius: 25px;
     padding: 10px;
 }
 
 nav ul {
-    list-style-type: none; /* Removes bullet points */
-    padding: 0; /* Removes padding */
-    display: flex; /* Aligns items in a row */
-    justify-content: center; /* Center items */
-    flex-wrap: wrap; /* Allows items to wrap on small screens */
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 nav li {
-    margin: 0 15px; /* Adds spacing between buttons */
+    margin: 0 15px;
 }
 
 nav a {
-    display: inline-block; /* Makes links behave like buttons */
-    padding: 10px 20px; /* Adds padding */
-    background-image: url('https://raw.githubusercontent.com/matt94856/PaneRelievers/refs/heads/main/Pane%20Relievers%20logo%201.webp'); /* Set your background image */
-    background-size: cover; /* Cover the button area */
-    color: white; /* Text color */
-    text-decoration: none; /* Removes underline */
-    border-radius: 5px; /* Rounded corners */
-    transition: background-color 0.3s ease; /* Smooth background change */
+    display: inline-block;
+    padding: 10px 20px;
+    background-image: url('https://raw.githubusercontent.com/matt94856/PaneRelievers/refs/heads/main/Pane%20Relievers%20logo%201.webp');
+    background-size: cover;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
 nav a:hover {
-    background-color: rgba(0, 0, 0, 0.5); /* Darkens background on hover */
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .main-header nav ul li {
-    flex: none; /* Prevent flex-grow */
+    flex: none;
 }
 
 .main-header nav ul li a {
@@ -71,10 +71,10 @@ nav a:hover {
     text-decoration: none;
     padding: 10px 20px;
     border-radius: 30px;
-    background-image: url('https://raw.githubusercontent.com/matt94856/PaneRelievers/refs/heads/main/Pane%20Relievers%20logo%201.webp'); /* Replace with actual image URL */
+    background-image: url('https://raw.githubusercontent.com/matt94856/PaneRelievers/refs/heads/main/Pane%20Relievers%20logo%201.webp');
     background-size: cover;
     transition: background 0.3s ease, color 0.3s ease;
-    text-align: center; /* Center align text */
+    text-align: center;
     font-weight: bold;
 }
 
@@ -109,25 +109,25 @@ nav a:hover {
     }
     
     .main-header nav ul {
-        flex-direction: column; /* Stack items vertically on mobile */
-        align-items: center; /* Center align on mobile */
-        width: 100%; /* Ensure full width */
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
     }
     
     .main-header nav ul li {
-        margin: 10px 0; /* Adjust spacing between buttons on mobile */
+        margin: 10px 0;
     }
     
     .main-header nav ul li a {
-        padding: 8px 16px; /* Adjust padding for mobile */
-        font-size: 0.9em; /* Smaller font size on mobile */
+        padding: 8px 16px;
+        font-size: 0.9em;
         color: #fff;
-        width: 90%; /* Ensure buttons fit within viewport */
+        width: 90%;
     }
     
     /* Adjust Hero Section Padding */
     .hero {
-        padding: 60px 15px; /* Reduce padding for smaller screens */
+        padding: 60px 15px;
     }
     
     /* Adjust Hero Section Font Sizes */
@@ -275,20 +275,20 @@ nav a:hover {
 /* New Circular Button Style */
 .service-box .circular-btn {
     display: inline-block;
-    background-color: black; /* Black background for button */
-    color: white; /* Text color */
-    border-radius: 50%; /* Circular shape */
-    width: 50px; /* Width of the button */
-    height: 50px; /* Height of the button */
-    text-align: center; /* Center the text */
-    line-height: 50px; /* Center vertically */
-    font-size: 1.2em; /* Font size */
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 1.2em;
     transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .service-box .circular-btn:hover {
-    background-color: #333; /* Darker shade on hover */
-    transform: scale(1.1); /* Slightly enlarge on hover */
+    background-color: #333;
+    transform: scale(1.1);
 }
 
 /* About Section */
@@ -311,8 +311,20 @@ nav a:hover {
 }
 
 .about-section p {
-    font-size: 1.2em;
-    margin: 20px 0;
+    font-size: 1.1em;
+    color: #333;
+}
+
+.quote-button, .inquiry-button {
+    background-color: #6a5acd;
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 1em;
+    margin-top: 10px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
 }
 
 /* Review Section */
@@ -355,186 +367,6 @@ nav a:hover {
     font-size: 1.1em;
 }
 
-/* Contact Section */
-.contact-section {
-    padding: 50px 20px;
-    text-align: center;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin: 20px 0;
-    border-radius: 15px;
-    transition: background 0.3s ease;
-    animation: fadeIn 2s ease-out;
-}
-
-.contact-section h2 {
-    font-size: 2em;
-    color: #6a5acd;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-.contact-section form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.contact-section input, .contact-section textarea {
-    width: 80%;
-    max-width: 600px;
-    margin: 10px 0;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-.contact-section button {
-    background: #6a5acd;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-.contact-section button:hover {
-    background: #483d8b;
-}
-
-/* Footer */
-.footer {
-    background-color: #6a5acd;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-    margin-top: 20px;
-}
-
-/* Animation Keyframes */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes fadeInLeft {
-    from {
-        transform: translateX(-100%);
-        opacity: 0;
-    }
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-/* Quote and Inquiry Buttons */
-.quote-button, .inquiry-button {
-    display: inline-block; /* Ensures they behave like buttons */
-    background-color: black; /* Black background for the buttons */
-    color: white; /* Text color */
-    border-radius: 25px; /* Rounded corners */
-    padding: 10px 20px; /* Padding for space around text */
-    text-align: center; /* Center the text */
-    font-size: 1em; /* Font size */
-    transition: background 0.3s ease, transform 0.3s ease; /* Smooth transition */
-    border: none; /* No border */
-    cursor: pointer; /* Pointer on hover */
-}
-
 .quote-button:hover, .inquiry-button:hover {
-    background-color: #333; /* Darker shade on hover */
-    transform: scale(1.05); /* Slightly enlarge on hover */
-}
-
-/* Responsive Design Enhancements */
-@media (max-width: 1200px) {
-    /* Ensure sections don't exceed screen width */
-    .services, .about-section, .review-section, .contact-section {
-        padding: 40px 15px;
-    }
-}
-
-@media (max-width: 992px) {
-    /* Adjust navigation padding and spacing */
-    .main-header nav {
-        padding: 8px;
-    }
-    
-    nav li {
-        margin: 0 10px;
-    }
-    
-    nav a {
-        padding: 8px 16px;
-    }
-    
-    .main-header nav ul li a {
-        padding: 8px 16px;
-    }
-}
-
-@media (max-width: 576px) {
-    /* Further adjustments for very small screens */
-    .main-header h1 {
-        font-size: 1.5em;
-    }
-    
-    .main-header nav ul li a {
-        padding: 6px 12px;
-        font-size: 0.8em;
-    }
-    
-    .hero {
-        padding: 60px 10px;
-    }
-    
-    .hero h2 {
-        font-size: 1.6em;
-    }
-    
-    .hero p {
-        font-size: 1em;
-    }
-    
-    .hero .btn {
-        padding: 10px 20px;
-        font-size: 0.9em;
-    }
-    
-    .services h2,
-    .about-section h2,
-    .review-section h2,
-    .contact-section h2 {
-        font-size: 1.4em;
-    }
-    
-    .service-box h3 {
-        font-size: 1.4em;
-    }
-    
-    .service-box p {
-        font-size: 1em;
-    }
-    
-    .service-box .circular-btn {
-        width: 40px;
-        height: 40px;
-        line-height: 40px;
-        font-size: 1em;
-    }
-    
-    .quote-button, .inquiry-button {
-        padding: 8px 16px;
-        font-size: 0.8em;
-    }
-    
-    .contact-section input, .contact-section textarea {
-        width: 90%;
-    }
+    background-color: #483d8b;
 }
