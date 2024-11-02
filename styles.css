@@ -43,7 +43,7 @@ nav ul {
 }
 
 nav li {
-    margin: 0 15px;
+    margin: 0 10px; /* Reduced margin for better spacing */
 }
 
 nav a {
@@ -59,6 +59,16 @@ nav a {
 
 nav a:hover {
     background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive Button Styles */
+@media (max-width: 768px) {
+    nav a {
+        padding: 10px 15px; /* Adjust padding for mobile */
+        font-size: 0.9em; /* Adjust font size for mobile */
+        flex-grow: 1; /* Allow buttons to grow and fill the space */
+        text-align: center; /* Center text within buttons */
+    }
 }
 
 .main-header nav ul li {
@@ -371,8 +381,20 @@ nav a:hover {
     text-align: center; /* Centers inline elements like the image and text */
 }
 
+/* Carousel Image Styles */
 .carousel-image {
-    display: inline-block; /* Makes the image inline for centering */
+    max-width: 100%; /* Ensures images fit within their container */
+    height: auto; /* Maintains aspect ratio */
+    display: block; /* Allows for centering */
+    margin: 0 auto; /* Centers the image horizontally */
+}
+
+/* Responsive Carousel Adjustments */
+@media (max-width: 768px) {
+    .carousel-image {
+        width: 90%; /* Slightly smaller width on mobile for better fitting */
+        margin: 0 auto; /* Centers the image */
+    }
 }
 
 /* Contact Section */
