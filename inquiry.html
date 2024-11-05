@@ -187,37 +187,42 @@
 </form>
 
     <script>
-        function submitForm() {
-    const formData = {
-        fullName: document.getElementById('fullName').value,
-        email: document.getElementById('email').value,
-        phone: document.getElementById('phone').value,
-        windowCount: document.getElementById('windowCount').value,
-        stories: document.getElementById('stories').value,
-        windowType: document.getElementById('windowType').value,
-        frequency: document.getElementById('frequency').value,
-        message: document.getElementById('message').value
-    };
+    // Wait for the DOM to fully load
+    document.addEventListener("DOMContentLoaded", function() {
+        // Add an event listener to the form
+        document.getElementById("contactForm").addEventListener("submit", async function(event) {
+            event.preventDefault(); // Prevent default form submission
 
-    fetch('/.netlify/functions/webhook', { // Change this line
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(formData)
-    })
-    .then(response => response.json())
-    .then(data => {
-        document.getElementById('responseMessage').innerHTML = '<div class="success">' + data.message + '</div>';
-        document.getElementById('contactForm').reset();
-    })
-    .catch(error => {
-        console.error('Error:', error);
-        document.getElementById('responseMessage').innerHTML = '<div class="error">There was an error submitting your request. Please try again later.</div>';
+            const formData = {
+                fullName: document.getElementById('fullName').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                windowCount: document.getElementById('windowCount').value,
+                stories: document.getElementById('stories').value,
+                windowType: document.getElementById('windowType').value,
+                frequency: document.getElementById('frequency').value,
+                message: document.getElementById('message').value
+            };
+
+            try {
+                const response = await fetch('https://panerelievers.netlify.app/.netlify/functions/webhook', { // Change this to your deployed webhook URL
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(formData)
+                });
+
+                const data = await response.json();
+                document.getElementById('responseMessage').innerHTML = '<div class="success">' + data.message + '</div>';
+                document.getElementById('contactForm').reset();
+            } catch (error) {
+                console.error('Error:', error);
+                document.getElementById('responseMessage').innerHTML = '<div class="error">There was an error submitting your request. Please try again later.</div>';
+            }
+        });
     });
-}
-
-    </script>
+</script>
 
 </body>
 </html>
