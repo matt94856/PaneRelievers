@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Cleaning Service Request</title>
+    <style>
+        /* General Page Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #f2f5ff, #e1e6ff);
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* Logo Styling */
+        #logo {
+            max-width: 150px;
+            margin: 20px auto;
+        }
+
+        /* Inquiry Form Container */
+        #inquiry-page .inquiry-section {
+            background: #ffffff;
+            border-radius: 15px;
+            padding: 30px 40px;
+            max-width: 700px;
+            box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.2), inset 0px 0px 15px rgba(255, 255, 255, 0.1);
+            margin-top: 20px;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        #inquiry-page .inquiry-section h2 {
+            font-size: 2.3em;
+            color: #483d8b;
+            margin-bottom: 20px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        #inquiry-page .inquiry-section label {
+            display: block;
+            text-align: left;
+            margin: 15px 0 5px;
+            font-weight: 600;
+            color: #4a4a4a;
+        }
+
+        /* Form Input and Select Styles */
+        #inquiry-page .inquiry-section input,
+        #inquiry-page .inquiry-section textarea,
+        #inquiry-page .inquiry-section select {
+            width: 100%;
+            padding: 12px;
+            font-size: 1.1em;
+            border: 1px solid #c2d6ff;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            background-color: #f9faff;
+            transition: all 0.3s ease;
+            box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        #inquiry-page .inquiry-section input:focus,
+        #inquiry-page .inquiry-section textarea:focus,
+        #inquiry-page .inquiry-section select:focus {
+            border-color: #6a5acd;
+            background-color: #ffffff;
+            box-shadow: 0 0 8px rgba(106, 90, 205, 0.3);
+            outline: none;
+        }
+
+        #inquiry-page .inquiry-section textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        /* Button Styling */
+        #inquiry-page .inquiry-section button {
+            background: linear-gradient(145deg, #6a5acd, #483d8b);
+            color: white;
+            padding: 14px 28px;
+            font-size: 1.2em;
+            font-weight: 600;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        #inquiry-page .inquiry-section button:hover {
+            background: linear-gradient(145deg, #483d8b, #6a5acd);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+        }
+
+        /* Success and Error Messages */
+        #inquiry-page .response {
+            font-weight: bold;
+            padding: 12px;
+            text-align: center;
+            border-radius: 10px;
+            margin-top: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .success {
+            color: #155724;
+            background-color: #d4edda;
+            border: 1px solid #c3e6cb;
+        }
+
+        .error {
+            color: #721c24;
+            background-color: #f8d7da;
+            border: 1px solid #f5c6cb;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body id="inquiry-page">
+
+    <!-- Logo Image -->
+    <img id="logo" src="https://raw.githubusercontent.com/matt94856/PaneRelievers/refs/heads/main/Pane%20Relievers%20logo%201.webp" alt="Company Logo">
+
+    <!-- Inquiry Form -->
+    <form id="contactForm" class="inquiry-section">
+        <h2>Window Cleaning Service Request</h2>
+
+        <label for="fullName">Full Name</label>
+        <input type="text" id="fullName" name="fullName" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <label for="squareFootage">Square Footage</label>
+        <input type="number" id="squareFootage" name="squareFootage" placeholder="Enter the square footage" required>
+
+        <label for="stories">Number of Stories</label>
+        <input type="number" id="stories" name="stories" placeholder="e.g., 1, 2, 3" required>
+
+        <label for="windowType">Type of Windows</label>
+        <select id="windowType" name="windowType">
+            <option value="Standard">Standard</option>
+            <option value="French">French</option>
+            <option value="Bay">Bay</option>
+            <option value="Skylights">Skylights</option>
+            <option value="Other">Other</option>
+        </select>
+
+        <label for="frequency">Cleaning Frequency</label>
+        <select id="frequency" name="frequency">
+            <option value="One-Time">One-Time</option>
+            <option value="Monthly">Monthly</option>
+            <option value="Quarterly">Quarterly</option>
+            <option value="Annually">Annually</option>
+        </select>
+
+        <label for="message">Additional Information</label>
+        <textarea id="message" name="message" rows="4" placeholder="Any other details about your service needs"></textarea>
+
+        <button type="button" onclick="submitForm()">Submit</button>
+
+        <div id="responseMessage" class="response"></div>
+    </form>
+
+    <script>
+        function submitForm() {
+            const formData = {
+                fullName: document.getElementById('fullName').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                squareFootage: document.getElementById('squareFootage').value,
+                stories: document.getElementById('stories').value,
+                windowType: document.getElementById('windowType').value,
+                frequency: document.getElementById('frequency').value,
+                message: document.getElementById('message').value
+            };
+
+            fetch('https://hook.us1.make.com/h3js782gglnh2s6wqqq0txdgyhm7ghqo', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            })
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('responseMessage').innerHTML = '<div class="success">Request submitted successfully!</div>';
+                document.getElementById('contactForm').reset();
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                document.getElementById('responseMessage').innerHTML = '<div class="error">There was an error submitting your request. Please try again later.</div>';
+            });
+        }
+    </script>
+
+</body>
+</html>
